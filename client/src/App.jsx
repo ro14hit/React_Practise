@@ -10,17 +10,18 @@ import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   console.log("helios");
+
   return (
     <div>
       <Header />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/addUser" element={<AddUser/>}/>
-          <Route path="/updateUser" element={<UpdateUser/>}/>
-          <Route path="deleteUser" element={<DeleteUser/>}/>
-          <Route path="*" element={<PageNotFound/>}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/addUser" element={<AddUser />} />
+          <Route path="/updateUser" element={<UpdateUser />} />
+          <Route path="deleteUser" element={<DeleteUser />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
       <Footer />
