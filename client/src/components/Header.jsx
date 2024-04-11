@@ -1,5 +1,5 @@
 import React from 'react'
-import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
+import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircle';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -17,12 +17,12 @@ const Header = () => {
   return (
     <div className="flex justify-between items-center fixed top-0 w-full bg-blue-900 text-white ">
       <HubRoundedIcon className='ml-4'/>
-      <div className="text-center" style={{ margin: 'auto' }}>Header</div>
+      <div className="text-center" >Header</div>
       <IconButton  aria-controls={open ? 'demo-positioned-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}  >
-      <AccountCircleTwoToneIcon fontSize='large'  />
+      <AccountCircleTwoToneIcon fontSize='large' className="bg-white rounded-full"  />
       </IconButton>
       <Menu
         id="demo-positioned-menu"
@@ -31,7 +31,7 @@ const Header = () => {
         open={open}
         onClose={handleClose}
         anchorOrigin={{
-          vertical: 'top',
+          vertical: 'bottom',
           horizontal: 'left',
         }}
         transformOrigin={{
@@ -39,8 +39,7 @@ const Header = () => {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}>My Profile</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>
